@@ -8,6 +8,13 @@ class Product(models.Model):
         max_length=256,
     )
     price = models.FloatField()
+    customer = models.ForeignKey(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="product_customer",
+    )
 
 
 # Create your models here.
