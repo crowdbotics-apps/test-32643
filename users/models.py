@@ -24,9 +24,9 @@ class User(AbstractUser):
         max_length=255,
     )
     surname = models.CharField(
-        max_length=256,
         null=True,
         blank=True,
+        max_length=256,
     )
     age = models.IntegerField(
         null=True,
